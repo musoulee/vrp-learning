@@ -164,6 +164,19 @@ module.exports = {
           return dayjs(timestamp).format('YYYY/MM/DD, HH:mm:ss')
         },
       }
+    ],
+    [
+      'vuepress-plugin-comment',
+      {
+        choosen: 'valine', // 使用valine评论系统
+        options: {
+          el: '#valine-vuepress-comment',
+          appId: 'C7MMExQCoWT3dDmaoRMEzaed-gzGzoHsz',
+          appKey: 'pmPxD2Uz9haXIFd051vIKLCU',
+          placeholder: '尽情吐槽吧！',
+          
+        }
+      }
     ]
   ],
 

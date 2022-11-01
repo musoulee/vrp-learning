@@ -3,7 +3,7 @@ const htmlModules = require('./config/htmlModules.js');
 
 
 module.exports = {
-
+  port: 8989, // 改变一下默认端口
   theme: 'vdoing', 
   title: "车辆路径问题",
   description: '一个有关车辆路径问题的知识库',
@@ -20,15 +20,22 @@ module.exports = {
       { text: '首页', link: '/' },
       { text: '归档', link: '/archives/'},
       { text: '概述', link: '/', items:[
-        { text: '整数规划入门', link: '/'},
-        { text: '车辆路径问题建模', link: '/'}
+        { text: '整数规划基础', link: '/', items:[
+          { text: '整数规划建模技巧', link: '/'},
+          { text: '对偶理论', link: '/'}
+        ]},
+        { text: '车辆路径问题', link: '/pages/be2b74/', items:[
+          { text: '介绍', link: '/pages/be2b74/'},
+          { text: '建模方法', link: '/'}
+        ]}
       ]},
       { text: '算法', link: '/', items:[
         { text: '精确算法', link: '/'},
         { text: '启发式算法', link: '/'}
       ]},
-      { text: '文献', link:'/'},
-      { text: '支持', link: '/pages/2f54fa/'},
+      { text: '文献阅读', link: '/'},
+      { text: '资源', link: '/pages/673562/'},
+      { text: '关于本站', link: '/pages/2f54fa/'},
 
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
@@ -174,7 +181,7 @@ module.exports = {
           appId: 'C7MMExQCoWT3dDmaoRMEzaed-gzGzoHsz',
           appKey: 'pmPxD2Uz9haXIFd051vIKLCU',
           placeholder: '尽情吐槽吧！',
-          
+          avatar: 'robohash',
         }
       }
     ]

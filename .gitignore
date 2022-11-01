@@ -9,8 +9,9 @@ yarn-error.log
 #yarn
 yarn.lock
 
-# vuepress
-docs/.vuepress/dist
+# 发布
+docs/.vuepress
+docs/@pages
 
 # 百度链接推送
 urls.txt

@@ -1,0 +1,46 @@
+{
+  "name": "vrp-learning-doc",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "sh deploy-gh.sh",
+    "updateTheme": "yarn remove vuepress-theme-vdoing && rm -rf node_modules && yarn && yarn add vuepress-theme-vdoing -D",
+    "editFm": "node utils/editFrontmatter.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "dayjs": "^1.9.7",
+    "inquirer": "^7.1.0",
+    "json2yaml": "^1.1.0",
+    "vuepress": "1.9.2",
+    "vuepress-plugin-baidu-tongji": "^1.0.1",
+    "vuepress-plugin-demo-block": "^0.7.2",
+    "vuepress-plugin-fulltext-search": "^2.2.1",
+    "vuepress-plugin-one-click-copy": "^1.0.2",
+    "vuepress-plugin-thirdparty-search": "^1.0.2",
+    "vuepress-plugin-zooming": "^1.1.7",
+    "vuepress-theme-vdoing": "^1.12.3",
+    "yamljs": "^0.3.0"
+  },
+  "description": "<p align=\"center\"><a href=\"https://xugaoyi.com/\" target=\"_blank\" rel=\"noopener noreferrer\"><img width=\"180\" src=\"https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200409124835.png\" alt=\"logo\"></a></p>",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/musoulee/vrp-learning.git"
+  },
+  "keywords": [
+    "vrp"
+  ],
+  "author": "musoulee",
+  "bugs": {
+    "url": "https://github.com/musoulee/vrp-learning/issues"
+  },
+  "homepage": "https://github.com/musoulee/vrp-learning#readme",
+  "dependencies": {
+    "vuepress-plugin-comment": "^0.7.3"
+  }
+}

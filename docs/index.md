@@ -23,6 +23,7 @@ postList: simple
 
 ## ⚡️本站日历
 
+- **2022-11-03**：安装`markdown-it-mathjax3`插件，使博客支持Latex解析。
 - **2022-11-01**：正式部署在Github上，使用VuePress驱动。
 
 

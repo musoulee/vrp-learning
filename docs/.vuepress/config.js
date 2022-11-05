@@ -20,12 +20,12 @@ module.exports = {
       { text: '首页', link: '/' },
       { text: '归档', link: '/archives/'},
       { text: '概述', link: '/', items:[
-        { text: '整数规划基础', link: '/', items:[
-          { text: '整数规划建模技巧', link: '/'},
+        { text: '运筹学基础', link: '/', items:[
+          { text: '整数规划', link: '/'},
           { text: '对偶理论', link: '/'}
         ]},
         { text: '车辆路径问题', link: '/pages/be2b74/', items:[
-          { text: '介绍', link: '/pages/be2b74/'},
+          { text: '概述', link: '/pages/be2b74/'},
           { text: '建模方法', link: '/'}
         ]}
       ]},
@@ -52,7 +52,7 @@ module.exports = {
     editLinkText: '帮助我改善此页面',
 
     // 以下配置是Vdoing主题改动的和新增的配置
-    sidebar: { mode: 'structuring', collapsable: false }, // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | 自定义    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
+    sidebar: { mode: 'structuring', collapsable: true }, // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | 自定义    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
 
     // sidebarOpen: false, // 初始状态是否打开侧边栏，默认true
     updateBar: { // 最近更新栏
@@ -184,12 +184,34 @@ module.exports = {
           avatar: 'robohash',
         }
       }
-    ]
+    ],
+    // [
+    //   'vuepress-plugin-mathjax', // 不太好用
+    //   {
+    //     target: 'svg',
+    //     macros:{
+    //       '*': '\\times',
+    //     }
+    //   }
+    // ],
+    // [
+    //   '@renovamen/vuepress-plugin-katex', {
+    //     'throwOnError': false,
+    //     'errorColor': '#cc0000'
+    //   }
+    // ]
   ],
 
   markdown: {
     // lineNumbers: true,
     extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6'], // 提取标题到侧边栏的级别，默认['h2', 'h3']
+
+
+  },
+  extendMarkdown: md => {
+    // 支持mathjax
+    md.set({ breaks: true})
+    md.use(require('markdown-it-mathjax3'))
   },
 
   // 监听文件变化并重新构建

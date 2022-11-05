@@ -17,6 +17,7 @@
     "vuepress-plugin-baidu-tongji": "^1.0.1",
     "vuepress-plugin-demo-block": "^0.7.2",
     "vuepress-plugin-fulltext-search": "^2.2.1",
+    "vuepress-plugin-mathjax": "^1.2.8",
     "vuepress-plugin-one-click-copy": "^1.0.2",
     "vuepress-plugin-thirdparty-search": "^1.0.2",
     "vuepress-plugin-zooming": "^1.1.7",
@@ -41,6 +42,10 @@
   },
   "homepage": "https://github.com/musoulee/vrp-learning#readme",
   "dependencies": {
+    "@renovamen/vuepress-plugin-katex": "^0.2.0",
+    "markdown-it": "^13.0.1",
+    "markdown-it-katex": "^2.0.3",
+    "markdown-it-mathjax3": "^4.3.2",
     "vuepress-plugin-comment": "^0.7.3"
   }
 }

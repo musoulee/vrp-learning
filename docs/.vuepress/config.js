@@ -26,7 +26,7 @@ module.exports = {
         ]},
         { text: '车辆路径问题', link: '/pages/be2b74/', items:[
           { text: '概述', link: '/pages/be2b74/'},
-          { text: '建模方法', link: '/'}
+          { text: '建模方法', link: '/pages/00887c/'}
         ]}
       ]},
       { text: '算法', link: '/', items:[
@@ -212,6 +212,8 @@ module.exports = {
     // 支持mathjax
     md.set({ breaks: true})
     md.use(require('markdown-it-mathjax3'))
+    // 支持图片修改大小
+    md.use(require('markdown-it-imsize'))
   },
 
   // 监听文件变化并重新构建

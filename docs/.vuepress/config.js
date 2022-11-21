@@ -30,7 +30,7 @@ module.exports = {
         ]}
       ]},
       { text: '算法', link: '/', items:[
-        { text: '精确算法', link: '/'},
+        { text: '精确算法', link: '/pages/e85c89/'},
         { text: '启发式算法', link: '/'}
       ]},
       { text: '文献阅读', link: '/'},
